@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class exercicio1 {
 
     public static void main(String[] args) {
+        //Primeira parte do exercício 1
 
         //Inicialização do scanner.
         Scanner sc = new Scanner(System.in);
