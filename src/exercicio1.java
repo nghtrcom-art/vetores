@@ -3,31 +3,30 @@ public class exercicio1 {
 
     public static void main(String[] args) {
 
-        //*Para rodar os diferentes trechos de código retire ou acrescente os "/*" e "*/" ao final de cada trecho.
-
-
-         /*Vetor a ser ordenado
-        int vetor[] = new int[]{3, 55, 86, 100, 45, 35};
-
-        ordenaCrescente(vetor);
-        ordenaDecresente(vetor);*/
-
-        //Algoritmo que conta as vogais do nome ou frase do usuário.
+        //Inicialização do scanner.
         Scanner sc = new Scanner(System.in);
-        String nomeDoUsuario, vogais = "aeiouAEIOU";
-        int contador = 0;
 
-        System.out.println("Dite o seu nome ou uma frase para sabermos quantas vogais a:\n");
-        nomeDoUsuario = sc.nextLine();
+        //Instruções ao usuário.
+        System.out.println("Digite a quantidade de índices que terá o vetor:");
+        int quantidadeIndices = sc.nextInt();
 
-        for (int i = 0; i < nomeDoUsuario.length(); i++) {
+        //Vetor a ser ordenado
+        int vetor[] = new int[quantidadeIndices];
 
-            char letra = nomeDoUsuario.charAt(i);
-            if (vogais.indexOf(letra) != -1) {
-                contador++;
-            }
+        //Instruções ao usuário.
+        System.out.println("Agora digite os valores que estarão nesses índices:");
+        for (int i = 0; i < vetor.length; i++) {
+
+            vetor[i] = sc.nextInt();
         }
-        System.out.println("Aquantidade de vogais é: " + contador);
+        System.out.print("Os valores digitados foram:\n");
+        for (int j = 0; j < vetor.length; j++) {
+            System.out.print(vetor[j] + " ");
+        }
+        ordenaCrescente(vetor);
+        ordenaDecresente(vetor);
+
+
 
 
 
